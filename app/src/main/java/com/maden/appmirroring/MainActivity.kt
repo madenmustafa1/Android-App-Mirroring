@@ -1,16 +1,17 @@
 package com.maden.appmirroring
 
 import android.os.Bundle
+import android.os.Environment
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
-import com.maden.app_mirroring.presentation.SocketViewModel
+import com.maden.app_mirroring.common.util.toBitmap
 import com.maden.app_mirroring.domain.model.MirroringSocketUIState
 import com.maden.app_mirroring.domain.model.SocketInitModel
-import com.maden.app_mirroring.common.util.toBitmap
+import com.maden.app_mirroring.presentation.SocketViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -26,7 +27,7 @@ class MainActivity : AppCompatActivity() {
     private val socketViewModel = SocketViewModel(
         SocketInitModel(
             url = "http://10.0.2.2:8080/screenMirroring",
-            roomId = "courier"
+            roomId = "roomId"
         )
     )
 

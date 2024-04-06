@@ -26,7 +26,7 @@ internal class MirroringSocketClient(
     override fun onMessage(message: String?) {
         message?.let {
             when (it.trim().lowercase()) {
-                "close" -> {
+                "close" -> { 
                     isSocketConnected = false
                     socketListener.uiState(MirroringSocketUIState.Close)
                 }

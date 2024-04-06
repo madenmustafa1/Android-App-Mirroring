@@ -66,7 +66,6 @@ class SocketViewModel(
     }
 
     private val _handler = CoroutineExceptionHandler { _, exception ->
-        println("@@@ _handler CoroutineExceptionHandler got $exception")
     }
 
     override fun uiState(uiState: MirroringSocketUIState) {

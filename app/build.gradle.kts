@@ -41,5 +41,4 @@ dependencies {
     implementation("com.google.android.material:material:1.10.0")
 
     implementation(project(":app_mirroring"))
-
 }
